@@ -6,8 +6,7 @@ import twitter4j.auth.AccessToken;
 import java.util.List;
 
 public class Main {
-
-
+    
 
     public static class Worker extends Thread {
         String search;
@@ -76,38 +75,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-
-
         Worker w1 = new Worker("nba");
         Worker w2 = new Worker("nfl");
         w1.start();
         w2.start();
-
-//        Twitter twitter = new TwitterFactory().getInstance();
-//
-//        twitter.setOAuthConsumer(consumerKeyStr, consumerSecretStr);
-//        AccessToken accessToken = new AccessToken(accessTokenStr,
-//                accessTokenSecretStr);
-//
-//        twitter.setOAuthAccessToken(accessToken);
-//
-//        try {
-//            Query query = new Query("trump");
-//            QueryResult result;
-//            do {
-//                result = twitter.search(query);
-//                List<Status> tweets = result.getTweets();
-//                for (Status tweet : tweets) {
-//                    System.out.println("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
-//                    System.out.println(tweet.getCreatedAt());
-//                }
-//            } while ((query = result.nextQuery()) != null);
-//            System.exit(0);
-//        } catch (TwitterException te) {
-//            te.printStackTrace();
-//            System.out.println("Failed to search tweets: " + te.getMessage());
-//            System.exit(-1);
-//        }
     }
 
 }
